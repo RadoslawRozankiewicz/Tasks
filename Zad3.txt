@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Zad3
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+            int[] tab = new int[6];
+            Random gen = new Random();
+
+            int i = 0;
+            while (i < 6)
+            {
+                int x = gen.Next(1, 49);
+                if (!tab.Contains(x))
+                {
+                    tab[i] = x;
+                    i++;
+                }
+            }
+            foreach (int liczba in tab)
+            {
+                Console.WriteLine(liczba);
+            }
+
+            Console.ReadKey();
+
+        }
+	}
+}

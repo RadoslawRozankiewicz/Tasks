@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Zadanie1
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			int x = 0;
+			int y = 0;
+			Console.WriteLine("Podaj pierwszą liczbę:");
+			x = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Podaj drugą liczbę:");
+			y = Convert.ToInt32(Console.ReadLine());
+
+			if (x % 2 == 0)
+			{
+				Console.WriteLine("Pierwsza liczba jest podzielna przez 2");
+			}
+			else
+			{
+				Console.WriteLine("Pierwsza liczba nie jest podzielna przez 2");
+			}
+			if (y % 2 == 0)
+			{
+				Console.WriteLine("Druga liczba jest podzielna przez 2");
+			}
+			else
+			{
+				Console.WriteLine("Druga liczba nie jest podzielna przez 2");
+			}
+			//////////////////
+			// PRZEZ 3
+			//////////////////
+			///
+			if (x % 3 == 0)
+			{
+				Console.WriteLine("Pierwsza liczba jest podzielna przez 3");
+			}
+			else
+			{
+				Console.WriteLine("Pierwsza liczba nie jest podzielna przez 3");
+			}
+			if (y % 3 == 0)
+			{
+				Console.WriteLine("Druga liczba jest podzielna przez 3");
+			}
+			else
+			{
+				Console.WriteLine("Druga liczba nie jest podzielna przez 3");
+			}
+
+			y = Convert.ToInt32(Console.ReadLine());
+		}
+	}
+}

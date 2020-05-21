@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Zad12
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+
+			int pom1;
+			double pom2;
+
+			Console.WriteLine("FUNCKJA KWADRATOWA");
+			Console.WriteLine("Podaj a:");
+			double a = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Podaj b:");
+			double b = Convert.ToInt32(Console.ReadLine());
+			Console.WriteLine("Podaj c:");
+			double c = Convert.ToInt32(Console.ReadLine());
+			double delta = (b * b) - (4 * a * c);
+			Console.WriteLine("Delta = {0}", delta);
+			if (delta > 0)
+			{
+				double sqrt = Math.Sqrt(delta);
+				pom1 = Convert.ToInt32(sqrt);
+				pom2 = sqrt;
+				if (pom1 == pom2)
+				{
+					Console.WriteLine("Pierwiastek z delty = {0}", sqrt);
+				}
+				else
+				{
+					Console.WriteLine("Pierwiastek z delty jest liczbą niewymierną");
+					Console.WriteLine("Pierwiastek z delty = /{0}", delta);
+				}
+				double x1 = ((0 - b) + sqrt) / (a * 2);
+				double x2 = ((0 - b) - sqrt) / (a * 2);
+				Console.WriteLine("Jedno miejsce zerowe wynosi {0}, a drugie {1}", x1, x2);
+			}
+			if (delta == 0)
+			{
+				double x = (0 - b) / (a * 2);
+				Console.WriteLine("Miejsce zerowe wynosi {0}", x);
+			}
+			if (delta < 0)
+			{
+				Console.WriteLine("Brak miejsc zerowych");
+			}
+
+
+			double p = 0 - (b / (a * 2));
+			double q = 0 - (delta / (a * 4));
+
+			Console.WriteLine("Wierzchołek p wynosi {0}, a q wynosi {1}", p, q);
+
+			Console.ReadKey();
+		}
+	}
+}

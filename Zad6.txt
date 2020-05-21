@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Zad6
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+            int[] tabela = new int[7] { 4, 6, 11, -20, 7, 22, -5 };
+            double suma = 0;
+            int kwadrat;
+            Console.WriteLine("Zawartość tabeli:");
+            for (int i = 0; i < 7; i++)
+            {
+                Console.WriteLine(tabela[i]);
+                if (tabela[i] % 4 == 2 || tabela[i] < 0) 
+                {
+                    kwadrat = tabela[i] * tabela[i];
+                    suma += kwadrat;
+                }
+            }
+
+
+            Console.WriteLine("Suma wynosi: {0}", suma);
+            
+            Console.ReadKey();
+        }
+	}
+}

@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Zad7
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+            int[] tabela = new int[10] { 5, 7, -5, 10, 100, 55, 41, 31, 0, 9 };
+            double suma1 = 0;
+            double suma2 = 0;
+            Console.WriteLine("Zawartość tabeli:");
+            for (int i = 0; i < 10;i++)
+            {
+                Console.WriteLine(tabela[i]);
+                if (tabela[i] % 2 == 0)
+                {
+                    suma1 += tabela[i];
+                }
+                else
+                {
+                    suma2 += tabela[i];
+                }
+            }
+
+
+            Console.WriteLine("Suma liczb parzystych wynosi {0}, a nieparzystych {1}", suma1, suma2);
+
+            Console.ReadKey();
+        }
+	}
+}

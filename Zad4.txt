@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Zad4
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+            int[] tabela = new int[8] { 5, 8, 1, -2, -11, 88, 200, 77 };
+            int min = tabela[0];
+            int ID = 0;
+            min = tabela[0];
+            Console.WriteLine("Zawartość tabeli:");
+            for (int i = 0; i < 8; i++)
+            {
+                Console.WriteLine(tabela[i]);
+                if (tabela[i] < min)
+                {
+                    min = tabela[i];
+                    ID = i;
+                }
+            }
+
+            Console.WriteLine("Najmniejsza liczba w tabeli to {0} o indeksie {1}", min, ID);
+            Console.ReadKey();
+        }
+	}
+}

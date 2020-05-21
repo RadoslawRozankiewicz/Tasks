@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Zad8
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+            int[] tabela = new int[10] { 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 };
+            int spr = 1;
+            double r = 0;
+            r = tabela[1] - tabela[0];
+            double r2 = 0;
+            
+            for (int i = 0; i < 9; i++)
+            {
+                
+                r2 = tabela[i + 1] - tabela[i];
+                if (r2 != r)
+                {
+                    spr = 0;
+                }
+            }
+
+
+            if (spr == 1)
+            {
+                Console.WriteLine("Ten ciąg jest arytmetyczny");
+            }
+            else
+            {
+                Console.WriteLine("Ten ciąg nie jest arytmetyczny");
+            }
+
+            Console.ReadKey();
+        }
+	}
+}
